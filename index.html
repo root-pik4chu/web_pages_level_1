@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body{
+            font-family: monospace;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            
+        }
+        .nav{
+            margin: 10px;
+            /* color: white; */
+            /* border-radius: 30px; */
+            /* background-color: rgb(215, 240, 232); */
+            padding: 13px;
+            border-radius: 20px 60px;
+
+            border: 2px solid white;
+        }
+
+        .nav-link{
+
+            color: white;
+            font-size: 20px;
+            /* position: relative; */
+
+        }
+
+        .nav-link:hover{
+            color: white;
+            border-radius: 20px 60px;
+ 
+            border: 1px solid white;
+            /* background-color: rgb(255, 255, 255);
+            margin-left: 10px;
+            margin-right: 10px ;
+            border-radius: 20px; */
+        }
+
+
+
+        /* blur effect 
+         .nav:hover .nav-item{
+            filter: blur(3px);
+          color: rgb(29, 192, 138); 
+
+        }
+        
+        .nav:hover .nav-item:hover{
+
+            color: yellow; 
+            font-weight: 900;
+            filter: blur(0px);
+
+        /* } 
+        .colousel{
+            width: 100%;
+            height: 700px;
+            border: 2px solid rgb(255, 255, 255);
+        }
+
+        .colousel h1{
+            font-size: 100px;
+            margin-top: 200px;
+            text-align: center;
+        }
+        .colousel h2{
+            font-size: 30px;
+            text-align: center;
+        } */
+
+        .carousel-item {
+            /* color: aqua; */
+            color: white;
+            height: 850px;
+            width: 100%;
+        }
+        .d-block{
+            z-index: -1;
+            opacity: .40;
+            margin-bottom: 30px;
+        }
+        .carousel-item h1{
+            color: aliceblue;
+            z-index: 2;
+        }
+
+        #box1{
+           
+            padding: 30px;
+            margin: 10px;
+            border-radius: 20px 60px;
+
+            border: 2px white solid;
+        }
+        #click{
+            
+            padding: 5px;
+            border-top: 20px;
+            margin: 10px;
+            border-radius: 20px 60px;
+
+            border: 2px white solid;
+        }
+        .space{
+            margin-top: 50px;
+        }
+        #para{
+            color: white;
+        }
+        #about-left{
+            border-radius: 20px 60px;
+       
+            border: 2px solid white;
+            /* margin: 20px; */
+            padding: 100px;
+
+        }
+        #about-right{
+            border-radius: 20px 60px;
+
+            border: 2px solid white;
+            /* margin: 20px; */
+            padding: 100px;
+            
+
+        }
+        
+        .container{
+            margin-top: 5%;
+            max-width: 100%;
+            /* margin: 20px; */
+        }
+        #ToDoelements{
+            margin-top: 50px;
+            text-align: center;
+            border-radius: 20px 60px;
+
+            border: 2px solid white;
+        }
+        #ToDoelements h1{
+            font-size: 80px;
+        }
+        #boxes_2{
+            border-radius: 20px 60px;
+
+            border: 2px solid white;
+            margin-left: 100px;
+            margin-right: 100px;
+        
+            height: 300px;
+        }
+        #gap{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+
+        /* --------------------------------------------------- */
+            /* ---------flex box --------------*/
+
+            .cardItem{
+            width: 65%;
+            height: 450px;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 20px 60px;
+
+            /* display: flex; */
+            /* justify-content: space-around; */
+            
+            
+            
+            }       
+            .div1{
+                display: flex;
+                justify-content: space-between;
+                margin: 40px;
+
+            }
+            .div2{
+                display: flex;
+                justify-content: space-evenly;
+                margin-left: 100px;
+                margin-right: 100px;
+
+            }
+            .item{
+                width: 250px;
+                height: 150px;
+                border-radius: 20px 60px;
+
+                border: 2px solid rgb(255, 255, 255);
+                text-align: center;
+                font-size: 20px;
+            }
+            .item img{
+                width: 100px;
+            }
+            /* .item1{
+                background-color: lightyellow;
+            }
+            .item2{
+                background-color: rgb(247, 103, 103);
+            }
+            .item3{
+                background-color: rgb(28, 212, 105);
+            }
+            .item4{
+                background-color: rgb(83, 219, 197);
+            } */
+        /* ------------------------------------------------------ */
+            /* ----------------------------- uper part of card -------------------- */
+        .beta_1{
+            
+            text-align: center;
+            /* background-color: aquamarine; */
+            margin-left: 10%;
+            width: 80%;
+            height: 500px;
+            position: absolute;
+            border-radius: 40px;
+            border: 2px solid white;
+        }
+
+        /* -------------------------cards-------------------------- */
+        .cards{
+            display: flex;
+            border: 2px solid black;
+            width: 80%;
+            margin-left: 10%;
+            
+        }
+        .row{
+            justify-content: center;
+            margin-top: 100px;
+        }
+        .card{
+            width: 20%;
+            height: 500px;
+            margin: 30px;
+            border-radius: 20px 60px;
+            background-color: rgb(0, 0, 0);
+            border: 2px solid white;
+        }
+        .card .card-header{
+            border-radius: 20px 60px;
+        }
+        
+        #cardImag{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            justify-content: center;
+            object-fit: cover;
+            border: 1px solid white;
+            
+        }
+        .nameOf{
+            height: 50px;
+            width: 200px;
+            border: 2px solid rgb(255, 255, 255);
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 20px 60px;
+            font-weight: bolder;
+
+        }
+        /* ----------------------------------------------------------------------- */
+        /* ----------------------------------dabaaaa------------------------------------------------- */
+
+        /* .dabba{
+            width: 300px;
+            height: 300px;
+            border: 2px;
+        } */
+        .container_1{
+            margin-left: 10%;
+            width: 80%;
+            height: auto;
+            
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .section_1 , .section_2{
+            /* display: flex; */
+            display:flex;
+            margin: 30px;
+            /* justify-content: center; */
+            align-items: center;
+            width: 90%;
+            height: auto;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 20px 60px;
+            justify-content: space-evenly;
+            
+            
+        }
+        /* .section_2{ */
+            /* display: flex; */
+            /* display:flex; */
+            
+            /* justify-content: center; */
+            /* align-items: center;
+            width: 90%;
+            height: auto;
+            border: 2px solid rgb(255, 254, 254);
+            border-radius: 10px 20px;
+            justify-content: space-evenly; */
+        /* } */
+        .dabba{
+            width: 40%;
+            height: auto;
+            /* border: 2px solid rgb(255, 255, 255); */
+            padding: 20px;
+            
+        }
+
+        .p1{
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 20px 60px;
+        }
+        #itachi_1{
+            width: 90%;
+            height: auto;
+            
+        }
+        #itachi_2{
+            width: 90%;
+            height: 90%;
+        }
+
+        /* -----------------------------------------------------------------------------------foooter-------------------*/
+
+        .footer{
+            padding: 40px;
+            background-color: rgb(223, 223, 223);
+            margin: 20px;
+            border-radius: 20px 60px;
+        }
+
+        .footer .social{
+            text-align: center;
+            padding-bottom: 25px ;
+            color: rgb(0, 0, 0);
+
+        }
+        .footer .social a{
+            font-size: 24px;
+            color: inherit;
+            border: 1px solid rgb(0, 0, 0);
+            width: 40px;
+            height: 40px;
+            line-height: 38px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            margin: 0 10px;
+            opacity: 0.75;
+        }
+        .footer .social a:hover{
+            opacity: 1;
+        }
+
+        .footer ul{
+            margin-top: 0 ;
+            padding: 0;
+            list-style: none;
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        .footer ul a{
+            color: black;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+        .footer ul li{
+            display: inline-block;
+            padding: 0 15px;
+
+        }
+        .footer ul li a:hover{
+            opacity: 1;
+        }
+
+        .footer .copyright{
+            margin-top: 15px;
+            text-align: center;
+            font-size: 15px;
+            color: black;
+        }
+
+        /* -----------------------------------------------footer--------------------------------------------------- */
+    </style>
+
+
+</head>
+<body>
+
+
+    <!-- navbarrr  -->
+    <ul class="nav justify-content-end">
+        <!-- justify content center -- sab content center la yete
+        right kela tr right la jate
+
+        ani nav justify-content-end - end la nete 
+        nav nav-justified he purna width ghete 
+        -->
+
+
+
+        <li class="nav-item"><a href="#" class="nav-link">home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">about us</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">services</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">contect</a></li>
+    </ul>
+<!-- 
+    <div class="colousel">
+        <div>
+            <h1 #id="heading">this is my work </h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+        </div>
+    </div> -->
+
+    <br><br><br>
+    <!-- --------------------------------------------------------------------------------------- -->
+    <!-- --------------------------------slide section------------------------------------------ -->
+
+    <!-- slider are done for now .... add wallpi later  -->
+    <!-- add some pick up lines for each silde  -->
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+
+        <ol class="carousel-indicators">
+          <li data-target="#carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel" data-slide-to="1"></li>
+          <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+
+            <!-- text -->
+            <img #id="sliderImg" src="/colousel/1.jpg" class="d-block w-100" alt="" width="100%">
+            
+          </div>
+
+
+          <div class="carousel-item">
+            <h1>orewa monkey d luffy</h1>
+            <img #id="sliderImg" src="/colousel/2.jpg" class="d-block w-100" alt="">
+            
+            
+          </div>
+
+
+          <div class="carousel-item">
+
+            <img #id="sliderImg" src="/colousel/3.jpg" class="d-block w-100" alt="">
+          </div>
+
+
+        </div>
+
+
+        <button class="carousel-control-prev" type="button" data-target="#carousel" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+
+
+        <button class="carousel-control-next" type="button" data-target="#carousel" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+
+      <br><br><br>
+      <!--  ------------------------------------------------------------------------------------------------------>
+      <!-- -------------------------------------------about section--------------------------------------------- -->
+      <div class="space">
+
+      </div>
+
+
+    <div class="container" id="aboutSec_1">
+        <div class="row">
+            <div class="col-4 mx-auto" class="from-contol" id="about-left" >
+                <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non placeat asperiores beatae doloribus minus voluptate reiciendis similique aliquam quisquam maxime voluptas exercitationem cum aliquid aperiam cumque perspiciatis, omnis voluptates nam facilis veniam magni vel unde, deserunt recusandae? Accusantium excepturi, nulla autem ab fuga quasi earum itaque alias voluptas amet temporibus, dignissimos esse, corrupti distinctio quod. Illum ducimus, commodi deleniti excepturi debitis veniam molestias, qui doloremque nam </p>
+            </div>
+
+            <div class="col-6 mx-auto" id="about-right" >
+                <h1>Aboutt Us</h1>
+                <br>
+                <br>
+                <p id="para" class="from-contol">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non placeat asperiores beatae doloribus minus voluptate reiciendis similique aliquam quisquam maxime voluptas exercitationem cum aliquid aperiam cumque perspiciatis, omnis voluptates nam facilis veniam magni vel unde, deserunt recusandae? Accusantium excepturi, nulla autem ab fuga quasi earum itaque alias voluptas amet </p>
+
+                <button class=" btn btn-primary btn-lg" data-target="#btn_item" data-toggle="collapse">
+                    Readmore
+                </button>
+                <p  class="collapse" id="btn_item">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic officia molestias aut consequatur fuga id, pariatur asperiores reiciendis praesentium ab rerum sit quod tempore natus ducimus cupiditate voluptatem esse in dignissimos nisi sint. Consequuntur quas dolore esse alias fugit commodi voluptates adipisci reprehenderit quis blanditiis dolor placeat cum unde nostrum velit eum autem ea cupiditate cumque odit, veritatis voluptas ipsam veniam aspernatur! Qui fuga pariatur dignissimos quia libero ab? Placeat, totam assumenda iure nisi quod repellendus veniam eum distinctio iste officia nulla unde libero quia rerum atque. Inventore explicabo nemo nesciunt sapiente nostrum, ut voluptates delectus quisquam ipsa repellat.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- --------------------------------------------what we do section---------------------------------------------- -->
+    <div class="container" id="WhatWeDo">
+        <div class="rows">
+            <div class="col-8 mx-auto" class="from-control" id="ToDoelements">
+                <div class="element_1">
+                    <br>
+                <br>
+                <h1>What we do</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatum harum quas quibusdam, provident a. Debitis atque eaque quis dolorum?</p>
+                </div>
+                <h2>here are some example od where we can assist</h2>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------------------------------------------------------------------------------------- -->
+   
+    <div class="container cardItem ">
+        <div class="div1">
+            <div class="item item1">
+                <img src="colousel/p1.gif " alt="">
+                <br>
+                yoooooo
+            </div>
+            <div class="item item2">
+                <img src="colousel/p2.gif " alt="">
+                <br>
+                yoooooo
+            </div>
+            <div class="item item3">
+                <img src="colousel/p3.gif " alt="">
+                <br>
+                yoooooo
+
+            </div>
+            <div class="item item4">
+                <img src="colousel/p4.gif " alt="">
+                <br>
+                yoooooo
+
+            </div>
+        </div>
+        <div class="div2">
+            <div class="item item1">
+                <img src="colousel/p5.gif " alt="">
+                <br>
+                yoooooo
+
+            </div>
+            <div class="item item2">
+                <img src="colousel/p6.gif " alt="">
+                <br>
+                yoooooo
+            </div>
+            <div class="item item3">
+                <img src="colousel/p8.gif " alt="">
+                <br>
+                yoooooo
+            </div>
+            
+        </div>
+    </div>
+
+<!-- ------------------------------------------------------------------------------------------------------------------- -->
+
+
+    
+<!-- --------------------------------------------cards--------------------------------- -->
+<br><br><br>
+<div class="papa">
+    <div class="beta_1 ">
+        <h1>meet the founders</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur labore perferendis voluptates vero eius, eaque obcaecati. Maiores sit accusamus explicabo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia beatae nam praesentium sequi est repudiandae, voluptatem nihil earum iure blanditiis minus! Odio esse ipsum rem aut blanditiis quaerat rerum cupiditate.</p>
+    </div>
+    <br><br>
+    <div class="beta_2 cards" >
+        <div class="containder">
+            <div class="row">
+
+                <!-- card 1 -->
+                    <div class="card">
+                        <div class="card-header text-center" >
+                            <img src="colousel/c1.png" alt="" id="cardImag">
+                        </div>
+                        <div class="card-body">
+                            <div class="nameOf">
+                                sir.itachi
+                            </div>
+                            <br>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium distinctio voluptates maxime vel magnam possimus ab sunt voluptas obcaecati quasi.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <!-- end card 1 -->
+                    <!-- card 2 -->
+                    <div class="card">
+                        <div class="card-header text-center" >
+                            <img src="colousel/c2.jpg" alt="" id="cardImag">
+                        </div>
+                        <div class="card-body">
+                            <div class="nameOf">
+                                hinataa-love
+                            </div>
+                            <br>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium distinctio voluptates maxime vel magnam possimus ab sunt voluptas obcaecati quasi.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <!-- end card 2 -->
+                    <!-- card 3 -->
+                    <div class="card">
+                        <div class="card-header text-center" >
+                            <img src="colousel/c3.jpg" alt="" id="cardImag">
+                        </div>
+                        <div class="card-body">
+                            <div class="nameOf">
+                                op-naruto
+                            </div>
+                            <br>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium distinctio voluptates maxime vel magnam possimus ab sunt voluptas obcaecati quasi.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <!-- end card 3 -->
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- -----------------------------------------end od cards-------------------------------------------------------------- -->
+<!-- .container>.section_1>.dabba_1+.dabba2>.section2>.dabba_3+dabba4 -->
+
+<!-- --------------------------------------next divs --------------------------------------- -->
+
+
+
+<div class="container_1">
+    <div class="section_1">
+        <div class="dabba dabba_1">
+            <h1>Our driving Force</h1>
+            <div class="p1">
+                <h4>root</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eaque pariatur vero sunt recusandae voluptates aspernatur blanditiis mollitia ullam ducimus.</p>
+            </div>
+            <div class="p1">
+                <h4>root</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eaque pariatur vero sunt recusandae voluptates aspernatur blanditiis mollitia ullam ducimus.</p>
+            </div>
+            <div class="p1">
+                <h4>root</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eaque pariatur vero sunt recusandae voluptates aspernatur blanditiis mollitia ullam ducimus.</p>
+            </div>
+        </div>
+        <div class="dabba dabbaa_2">
+            <img src="colousel\i̇tachi-i̇tachi-pose.gif" alt="" id="itachi_1">
+        </div>
+    </div>
+    <div class="section_2">
+        <div class="dabba dabba_3">
+            <img src="colousel\tay.gif" alt="" id="itachi_2">
+        </div>
+        <div class="dabba dabbaa_4">
+            <h1>Here's to the future</h1>
+            <div class="p1">
+                <h4>root</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eaque pariatur vero sunt recusandae voluptates aspernatur blanditiis mollitia ullam ducimus.</p>
+            </div>
+            <div class="p1">
+                <h4>root</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eaque pariatur vero sunt recusandae voluptates aspernatur blanditiis mollitia ullam ducimus.</p>
+            </div>
+            <div class="p1">
+                <h4>root</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eaque pariatur vero sunt recusandae voluptates aspernatur blanditiis mollitia ullam ducimus.</p>
+            </div>
+            <div class="p1">
+                <h4>root</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eaque pariatur vero sunt recusandae voluptates aspernatur blanditiis mollitia ullam ducimus.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- --------------------------------------------------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------footer------------------------------------------------------------ -->
+
+
+<section class="footer">
+    <div class="social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-snapchat"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <ul class="list">
+        <li>
+            <a href="#">home</a>
+        </li>
+        <li>
+            <a href="#">services</a>
+        </li>
+        <li>
+            <a href="#">aboutUs</a>
+        </li>
+        <li>
+            <a href="#">contact</a>
+        </li>
+    </ul>
+    <p class="copyright">root-pik@chu</p>
+</section>
+
+
+
+
+
+
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------- -->
+
+
+      <div class="space">
+
+      </div>
+
+
+
+      <!-- ---------------------------------------------------------------------------------------- -->
+      <!-- ---------------------------hide wali info ..... link pe ka jadddooo hehe ----------------- -->
+    <br>
+    <div>
+        <a id="click" href="#box1" data-toggle="collapse">click here too show</a>
+    </div>
+
+    <div class="hide">
+        <p class="collapse" id="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti porro amet necessitatibus animi minima mollitia accusantium laboriosam consequatur reiciendis rerum? Rerum ex sequi ipsam quo quia porro neque incidunt quisquam?
+        <br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, enim labore fugit delectus ab veniam deleniti sunt amet! Temporibus, debitis beatae facere at officiis error quidem illo voluptate reprehenderit minus perferendis voluptates culpa architecto vitae consectetur 
+        <br>sed molestias explicabo nostrum voluptas. Neque, reprehenderit quidem officia autem nemo, excepturi est veniam impedit voluptatum libero atque recusandae molestias eos tempore? Cumque accusamus vel reprehenderit officiis perferendis perspiciatis voluptates, deleniti obcaecati ipsum ea voluptatibus possimus dolores vitae. Ullam, dolores asperiores voluptatibus nisi doloribus minus necessitatibus. Harum nemo ipsam quos velit tempora. Et officiis similique voluptas vero hic velit quasi rerum tempora corrupti nesciunt?
+        </p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
